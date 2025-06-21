@@ -1,0 +1,221 @@
+.submit-grievance {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.submit-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.submit-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.submit-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.submit-form-container {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.submit-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group label::after {
+  content: ' *';
+  color: #ff6b6b;
+}
+
+.form-group label:has(+ .input:not([required]))::after {
+  content: '';
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group {
+  margin-top: 2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+.checkbox-label::after {
+  content: '';
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox:checked + .checkmark {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.checkbox:checked + .checkmark::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  min-width: 200px;
+}
+
+.submit-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid #ff6b6b;
+}
+
+.info-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.info-card li::before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .submit-header h1 {
+    font-size: 2rem;
+  }
+  
+  .submit-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .btn-large {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-grievance {
+    padding: 1rem 0;
+  }
+  
+  .submit-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .submit-form {
+    padding: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.5rem;
+  }
+} 
